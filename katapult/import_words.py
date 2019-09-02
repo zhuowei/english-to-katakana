@@ -5,12 +5,13 @@ import re
 def gen_regex(jp_to_en):
     regexlist = [re.escape(a[1]) for a in jp_to_en]
     regexlist.sort()
+    regexlist.sort(key=lambda a: -len(a))
     return "|".join(regexlist)
 
 def gen_map(jp_to_en):
     m = {}
     for i in jp_to_en:
-        m[i[1]] = i[0]
+        m[i[1].lower()] = i[0]
     return json.dumps(m, ensure_ascii=False, sort_keys=True, indent=2)
 
 def clean(a):

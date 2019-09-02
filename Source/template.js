@@ -1,3 +1,6 @@
+const jpRegex = /(\W)(THEREGEX)(ed|es|d|s)?(\W)/gi;
+const jpMap = THEMAP;
+
 walk(document.body);
 
 function walk(node) 
@@ -35,14 +38,15 @@ function walk(node)
 	}
 }
 
+function handleReplace(match, g1, g2, g3, g4) {
+	return g1 + jpMap[g2.toLowerCase()] + (g3 || "") + g4;
+}
+
 function handleText(textNode) 
 {
 	var v = textNode.nodeValue;
 
-	v = v.replace(/\bThe Cloud\b/g, "My Butt");
-	v = v.replace(/\bThe cloud\b/g, "My butt");
-	v = v.replace(/\bthe Cloud\b/g, "my Butt");
-	v = v.replace(/\bthe cloud\b/g, "my butt");
+	v = v.replace(jpRegex, handleReplace);
 	
 	textNode.nodeValue = v;
 }
