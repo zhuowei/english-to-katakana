@@ -1,38 +1,20 @@
-cloud-to-butt
+english-to-katakana
 =============
 
-![](logo.png)
+![](demo.png)
 
-Chrome extension that replaces occurrences of 'the cloud' with 'my butt'
+Chrome extension that replaces English words with Katakana based on Wiktionary data.
 
-[Direct download of crx file](https://github.com/panicsteve/cloud-to-butt/blob/master/CloudToButt.crx?raw=true)
+Based on [panicsteve's cloud-to-butt](https://github.com/panicsteve/cloud-to-butt).
 
-Note that there are forks of this extension that simply replace 'cloud' with 'butt'.
-In my personal opinion, that approach is too broad and it's less funny as a result, but it is clearly a very
-polarizing issue in the cloud-to-butt user community.  Forks are free to do whatever they like.  But officially, _this_ extension replaces only the phrase described above, and therefore it did not replace your cloudflare URLs with buttflare URLs. Thank you for your concern.
+Mostly doesn't work: please don't actually use this to learn a language; you'll have a bad time.
 
-Screenshot Gallery
-------------------
+Made as a proof of concept based on [@FioraAeterna's tweet](https://twitter.com/FioraAeterna/status/1168367072545427456).
 
-http://www.flickr.com/groups/cloud-to-butt/
+[Direct download of crx file](https://github.com/zhuowei/english-to-katakana/blob/master/EnglishToKatakana.crx?raw=true)
 
 Installation
 ------------
 
-In Chrome, choose Window > Extensions.  Drag CloudToButt.crx into the page that appears.
+In Chrome, choose Window > Extensions. Drag EnglishToKatakana.crx into the page that appears.
 
-Safari Version
---------------
-
-Can be found here: https://github.com/logancollins/cloud-to-butt-safari
-
-Firefox Version
----------------
-
-Can be found here: https://github.com/DaveRandom/cloud-to-butt-mozilla
-
-
-Opera Version
----------------
-
-Can be found here: https://github.com/DaveRandom/cloud-to-butt-opera
