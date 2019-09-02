@@ -1,8 +1,8 @@
 {
 	"manifest_version": 2,
-	"name": "Cloud To Butt",
+	"name": "English to Katakana",
 	"version": "1.0",
-	"description": "Replaces the text 'the cloud' with 'my butt'.",
+	"description": "Replaces English words with Katakana based on Wiktionary data. Mostly doesn't work.",
 	"content_scripts": 
 	[
 		{
