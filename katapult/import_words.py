@@ -21,8 +21,32 @@ def clean(a):
 
 MIN_LEN = 3
 
+# These are words that the scraper obviously got wrong
+# I probably missed many, many.
+# I hand added these - if there's a way to automate this, please tell me
+words_to_omit = [
+"after",
+"adult",
+"aitch",
+"american",
+"athens",
+"axel",
+"back",
+"bargain",
+"centi-",
+"double-u",
+"drawers",
+"dying",
+"dyer",
+"free",
+"rice",
+]
+
+def should_keep_word(a):
+    return a is not None and len(a[1]) > MIN_LEN and not a[1].lower() in words_to_omit
+
 def filter_none(jp_to_en):
-    return [clean(a) for a in jp_to_en if a is not None and len(a[1]) > MIN_LEN]
+    return [clean(a) for a in jp_to_en if should_keep_word(a)]
 
 def main():
     if len(sys.argv) != 4:

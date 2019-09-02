@@ -1,4 +1,4 @@
-const jpRegex = /(\W)(THEREGEX)(ed|es|d|s)?(\W)/gi;
+const jpRegex = /(\W|^)(THEREGEX)(ed|es|d|s)?(\W|$)/gi;
 const jpMap = THEMAP;
 
 walk(document.body);
